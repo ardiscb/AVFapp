@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/gh-pages
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -15,8 +12,6 @@
         android:text="@string/hello_world"
         tools:context=".MainActivity" />
 
-<<<<<<< HEAD
+
 </RelativeLayout>
-=======
-</RelativeLayout>
->>>>>>> origin/gh-pages
+
