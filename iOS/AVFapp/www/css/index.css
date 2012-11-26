@@ -64,9 +64,12 @@ h1{
     margin-left: 35px;
     margin-right: 35px;
 }
-#first, #nativeFeatures, #research{
+.main{
     background: gray;
     border-radius: 15px;
     padding: 5px;
 
+}
+.liInline {
+    display: inline;
 }
