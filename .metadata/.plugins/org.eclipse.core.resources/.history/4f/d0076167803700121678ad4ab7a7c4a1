@@ -1,6 +1,22 @@
-/*Courtney Ardis
-AVF 1212
-Demo App 1 */
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
 body{
     background: black;
     font-family: Arial, Helvetica, serif;
@@ -12,6 +28,7 @@ body{
     box-shadow:inset 0px 0px 0px -1px #caefab;
     background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #77d42a), color-stop(1, #5cb811) );
     background:-moz-linear-gradient( center top, #77d42a 5%, #5cb811 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#77d42a', endColorstr='#5cb811');
     background-color:#77d42a;
     -moz-border-radius:10px;
     -webkit-border-radius:10px;
@@ -28,6 +45,7 @@ body{
 }.button:hover {
     background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #5cb811), color-stop(1, #77d42a) );
     background:-moz-linear-gradient( center top, #5cb811 5%, #77d42a 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#5cb811', endColorstr='#77d42a');
     background-color:#5cb811;
 }.button:active {
     position:relative;
@@ -48,12 +66,9 @@ h1{
     margin-left: 35px;
     margin-right: 35px;
 }
-.main{
+#first, #nativeFeatures, #research{
     background: gray;
     border-radius: 15px;
     padding: 5px;
 
-}
-.liInline {
-    display: inline;
 }

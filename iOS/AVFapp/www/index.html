@@ -1,21 +1,8 @@
 <!DOCTYPE html>
 <!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
+Courtney Ardis
+AVF 1212
+Demo App 1
 -->
 <html>
     <head>
@@ -28,32 +15,48 @@
     <body>
         <div id="header">
             <h1>My App</h1>
-            <div class="main" id="first">
-                <li>Courtney Ardis</li>
-                <li>AVF 1212</li>
-            </div>
         </div>
         <div id="content">
-            <div class="main" id="nativeFeatures">
-                <button type="button" class="button">Geo</button>
-                <button type="button" class="button">Camera</button>
-                <button type="button" class="button">Network</button>
-                <button type="button" class="button">Gyroscope</button>
-                <button type="button" class="button">Accelerometer</button>
+            
+            <div id="nativeFeatures">
+                <!--Insert Native Features header-->
+                <section>
+                    <h2>Native Features</h2>
+                    <ul class="main">
+                        <li class="liInline"><button type="button" class="button">Geolocation</button></li>
+                        <li class="liInline"><button type="button" class="button">Camera</button></li>
+                        <li class="liInline"><button type="button" class="button">Network</button></li>
+                        <li class="liInline"><button type="button" class="button">Notification</button></li>
+                        <li class="liInline"><button type="button" class="button">Events</button></li>
+                    </ul>
+                </section>
             </div>
-            <div class="main" id="research">
-                <li class="liInline"><a href="">Week 1</a> |</li>
-                <li class="liInline"><a href="">Week 2</a> |</li>
-                <li class="liInline"><a href="">Week 3</a> |</li>
-                <li class="liInline"><a href="">Week 4</a></li>
+            
+            <div id="research">
+                <!--Insert Research header-->
+                <section>
+                    <h2>Research</h2>
+                    <ul class="main">
+                        <li><a href="https://www.dropbox.com/s/zoax8eow6kzj4tr/Week1_DataResearchProjectIntent.docx">Week 1: Data Research, Project Intent</a></li>
+                        <li><a href="">Week 2: Accessibility</a></li>
+                        <li><a href="">Week 3: Industry Research</a></li>
+                    </ul>
+                </section>
             </div>
-            <div class="main" id="dataSources">
-                <li class="liInline"><a href="">Twitter</a> |</li>
-                <li class="liInline"><a href="">Flickr</a></li>
+            
+            <div id="dataSources">
+                <!--Insert Data Sources header-->
+                <section>
+                    <h2>Data Sources</h2>
+                    <ul class="main">
+                        <li class="liInline"><a href="">Twitter</a> |</li>
+                        <li class="liInline"><a href="">Flickr</a></li>
+                    </ul>
+                </section>
             </div>
         </div>
         <div id="footer">
-            <!-- GitHub Links -->
+            <small>Created by Courtney Ardis in AVF1212</small>
         </div>
         <script type="text/javascript" src="cordova-2.2.0.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
