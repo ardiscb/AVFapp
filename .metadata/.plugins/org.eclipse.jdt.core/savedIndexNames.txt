@@ -1,0 +1,6 @@
+INDEX VERSION 1.126+/Users/CourtneyArdis/Documents/Advanced Visual Frameworks/AVFapp/.metadata/.plugins/org.eclipse.jdt.core
+3170506279.index
+1311350801.index
+2233656945.index
+1604246421.index
+1055999761.index
