@@ -1,37 +1,48 @@
 <!DOCTYPE html>
+<!--
+Courtney Ardis
+AVF 1212
+Demo App 1
+-->
 <html>
     <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <script type="text/javascript" charset="utf-8" src="cordova-2.2.0.js"></script>
         <title>My App</title>
     </head>
     <body>
         <div id="header">
             <h1>My App</h1>
-            <div id="first">
+            <div class="main" id="first">
                 <li>Courtney Ardis</li>
                 <li>AVF 1212</li>
             </div>
         </div>
         <div id="content">
-            <div id="nativeFeatures">
-                <li class="button">Geo</li>
-                <li class="button">Camera</li>
-                <li class="button">Network</li>
-                <li class="button">Gyroscope</li>
-                <li class="button">Accelerometer</li>
+            <div class="main" id="nativeFeatures">
+                <button type="button" class="button">Geo</button>
+                <button type="button" class="button">Camera</button>
+                <button type="button" class="button">Network</button>
+                <button type="button" class="button">Gyroscope</button>
+                <button type="button" class="button">Accelerometer</button>
             </div>
-            <div id="research">
-                <li><a href="">Week 1</a></li>
-                <li><a href="">Week 2</a></li>
-                <li><a href="">Week 3</a></li>
-                <li><a href="">Week 4</a></li>
+            <div class="main" id="research">
+                <li class="liInline"><a href="">Week 1</a> |</li>
+                <li class="liInline"><a href="">Week 2</a> |</li>
+                <li class="liInline"><a href="">Week 3</a> |</li>
+                <li class="liInline"><a href="">Week 4</a></li>
+            </div>
+            <div class="main" id="dataSources">
+                <li class="liInline"><a href="">Twitter</a> |</li>
+                <li class="liInline"><a href="">Flickr</a></li>
             </div>
         </div>
         <div id="footer">
-            <!--Footer info here -->
+            <!-- GitHub Links -->
         </div>
-
+        <script type="text/javascript" src="cordova-2.2.0.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
     </body>
 </html>
