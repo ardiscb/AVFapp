@@ -6,7 +6,10 @@ body{
     font-family: Arial, Helvetica, serif;
     font-size: 14pt;
 }
-/* Button styling help from: http://www.cssbuttongenerator.com/ */
+/* 
+    Button styling help from: http://www.cssbuttongenerator.com/ 
+    Custom modifications
+*/
 .button {
     -moz-box-shadow:inset 0px 0px 0px -1px #caefab;
     -webkit-box-shadow:inset 0px 0px 0px -1px #caefab;
@@ -34,7 +37,10 @@ body{
     position:relative;
     top:1px;
 }
-/* Button styling help from: http://www.cssbuttongenerator.com/ */
+/* 
+    Button styling help from: http://www.cssbuttongenerator.com/ 
+    Custom modifications
+*/
 li{
     list-style: none;
 }
@@ -51,6 +57,9 @@ h2{
 }
 ul{
     margin: 0px;
+}
+.research{
+    color: #fff;
 }
 #header, #content, #footer {
     text-align: center;

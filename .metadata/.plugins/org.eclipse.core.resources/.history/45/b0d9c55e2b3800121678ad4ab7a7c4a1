@@ -27,7 +27,7 @@ Demo App 1
                         <li class="liInline"><button type="button" class="button">Camera</button></li>
                         <li class="liInline"><button type="button" class="button">Network</button></li>
                         <li class="liInline"><button type="button" class="button">Notification</button></li>
-                        <li class="liInline"><button type="button" class="button">Event</button></li>
+                        <li class="liInline"><button type="button" class="button">Events</button></li>
                     </ul>
                 </section>
             </div>
@@ -37,7 +37,7 @@ Demo App 1
                 <section>
                     <h2>Research</h2>
                     <ul class="main">
-                        <li><a href="research1.html">Week 1: Data Research, Project Intent</a></li>
+                        <li><a href="https://www.dropbox.com/s/zoax8eow6kzj4tr/Week1_DataResearchProjectIntent.docx">Week 1: Data Research, Project Intent</a></li>
                         <li><a href="">Week 2: Accessibility</a></li>
                         <li><a href="">Week 3: Industry Research</a></li>
                     </ul>
