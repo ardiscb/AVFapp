@@ -2,14 +2,10 @@
 AVF 1212
 Demo App 1 */
 body{
-    background: #292929;
+    background: black;
     font-family: Arial, Helvetica, serif;
-    font-size: 14pt;
+    font-size: 18pt;
 }
-/* 
-    Button styling help from: http://www.cssbuttongenerator.com/ 
-    Custom modifications
-*/
 .button {
     -moz-box-shadow:inset 0px 0px 0px -1px #caefab;
     -webkit-box-shadow:inset 0px 0px 0px -1px #caefab;
@@ -22,7 +18,7 @@ body{
     border-radius:10px;
     border:1px solid #268a16;
     display:inline-block;
-    color:#000;
+    color:#306108;
     font-family:arial;
     font-size:18px;
     font-weight:bold;
@@ -37,37 +33,20 @@ body{
     position:relative;
     top:1px;
 }
-/* 
-    Button styling help from: http://www.cssbuttongenerator.com/ 
-    Custom modifications
-*/
 li{
     list-style: none;
 }
 div{
+
     margin: 5px;
 }
 h1{
-    color: #77d42a;
+    color: green;
 }
-h2{
-    color: #77d42a;
-    text-align: left;
-    margin-bottom: 0px;
-}
-ul{
-    margin: 0px;
-}
-.research{
-    color: #fff;
-}
-#header, #content, #footer {
+#header, #content {
     text-align: center;
     margin-left: 35px;
     margin-right: 35px;
-}
-#footer{
-    color: gray;
 }
 .main{
     background: gray;
