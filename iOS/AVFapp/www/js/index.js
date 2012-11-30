@@ -18,4 +18,3 @@ $(function(){
 		}
 	});
 });
-console.log($("#twitterFeed"));
