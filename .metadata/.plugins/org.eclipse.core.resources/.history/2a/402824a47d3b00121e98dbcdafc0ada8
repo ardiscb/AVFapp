@@ -60,7 +60,7 @@ Demo App 2
                         <!--First video stored on Dropbox: https://www.dropbox.com/s/18agp61uiaru5qm/avf_short_1.mp4 -->
                         <source src="video/avf_short_1.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
                         <source src="video/avf_short_1.webm" type='video/webm; codecs=vp8, vorbis'>
-                        <source src='video/avf_short_1.oggtheora.ogv' type='video/ogg; codecs="theora, vorbis"'>
+                        <source src='video/avf_short_1.ogv' type='video/ogv; codecs="theora, vorbis"'>
                         <!-- <object
                             type="application/x-shockwave-flash"
                             data="http://youtu.be/Bn-qMJl7qkI">

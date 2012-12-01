@@ -2,8 +2,12 @@
 AVF 1212
 Demo App 2 */
 
-//AJAX call to get Twitter feeds about Marvel Comics
+var video = $('<video>');
+video.on('click',function(){
+  video.play();
+},false);
 
+//AJAX call to get Twitter feeds about Marvel Comics
 $.ajax({
     type: "GET",
     url: "http://search.twitter.com/search.json?q=marvel%20comics&callback=?",
