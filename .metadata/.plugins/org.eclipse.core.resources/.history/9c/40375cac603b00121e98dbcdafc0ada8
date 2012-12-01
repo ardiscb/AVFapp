@@ -56,7 +56,7 @@ Demo App 2
             <div id="video">
                 <section>
                     <h2>Video</h2>
-                    <video text-align="left" class="main" height="360" width="640" preload controls>
+                    <video text-align="left" class="main" preload controls>
                         <!--First video stored on Dropbox: https://www.dropbox.com/s/18agp61uiaru5qm/avf_short_1.mp4 -->
                         <source src="video/avf_short_1.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
                         <source src="video/avf_short_1.webm" type='video/webm; codecs=vp8, vorbis'>

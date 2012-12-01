@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="15" version="2.0">
+<workbench progressCount="31" version="2.0">
 <workbenchAdvisor/>
-<window height="768" width="1024" x="289" y="91">
+<window height="768" width="1024" x="83" y="22">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -16,7 +16,7 @@
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="100" y="22"/>
 <coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="62" y="22"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="62" y="22"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="98" y="22"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="32" y="22"/>
 <coolItem id="org.eclipse.wst.jsdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="54" y="22"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="54" y="22"/>
@@ -24,6 +24,8 @@
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="152" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.css.core.csssource.source" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.html.core.htmlsource.source" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
@@ -39,13 +41,28 @@
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
 <editor activePart="true" focus="true" id="org.eclipse.wst.html.core.htmlsource.source" name="index.html" partName="index.html" path="/Users/CourtneyArdis/Documents/Advanced Visual Frameworks/AVFapp/AVFapp/assets/www/index.html" title="index.html" tooltip="AVFapp/assets/www/index.html" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AVFapp/assets/www/index.html"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="227" selectionLength="0" selectionOffset="3781" selectionTopPixel="743"/>
+</editor>
+<editor id="org.eclipse.wst.css.core.csssource.source" name="index.css" partName="index.css" path="/Users/CourtneyArdis/Documents/Advanced Visual Frameworks/AVFapp/AVFapp/assets/www/css/index.css" title="index.css" tooltip="AVFapp/assets/www/css/index.css" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AVFapp/assets/www/css/index.css"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1845" selectionTopPixel="795"/>
+</editor>
+<editor id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="index.js" partName="index.js" path="/Users/CourtneyArdis/Documents/Advanced Visual Frameworks/AVFapp/AVFapp/assets/www/js/index.js" title="index.js" tooltip="AVFapp/assets/www/js/index.js" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AVFapp/assets/www/js/index.js"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1897" selectionTopPixel="555"/>
+</editor>
+<editor id="org.eclipse.wst.html.core.htmlsource.source" name="research1.html" partName="research1.html" path="/Users/CourtneyArdis/Documents/Advanced Visual Frameworks/AVFapp/AVFapp/assets/www/research1.html" title="research1.html" tooltip="AVFapp/assets/www/research1.html" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AVFapp/assets/www/research1.html"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3089" selectionTopPixel="150"/>
 </editor>
 </editors>
 <views>
@@ -53,7 +70,7 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Errors (2 items)"/>
+<category IMemento.internal.id="Warnings (1 item)"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -99,9 +116,7 @@
 </view>
 <view id="org.eclipse.wst.jsdt.ui.PackageExplorer" partName="Script Explorer">
 <viewState group_libraries="1" isWindowWorkingSet="false" layout="1" linkWithEditor="0" rootMode="1" workingSetName="">
-<customFilters userDefinedPatternsEnabled="false">
-<xmlDefinedFilters>
-<child filterId="org.eclipse.wst.jsdt.ui.PackageExplorer.ClosedProjectsFilter" isEnabled="false"/>
+<customFilters userDefinedPatternsEnabled="false">&#x0A;<xmlDefinedFilters>&#x0A;<child filterId="org.eclipse.wst.jsdt.ui.PackageExplorer.ClosedProjectsFilter" isEnabled="false"/>
 <child filterId="org.eclipse.wst.jsdt.ui.PackageExplorer.LibraryFilter" isEnabled="false"/>
 <child filterId="org.eclipse.wst.jsdt.ui.PackageExplorer.StaticsFilter" isEnabled="false"/>
 <child filterId="org.eclipse.wst.jsdt.ui.PackageExplorer.LocalTypesFilter" isEnabled="false"/>
@@ -166,31 +181,22 @@
 <view id="org.eclipse.ui.console.ConsoleView"/>
 <view id="org.eclipse.ui.views.ContentOutline"/>
 <fastViewBars/>
-<layout>
-<mainWindow>
-<info folder="true" part="left">
-<folder activePageID="org.eclipse.wst.jsdt.ui.PackageExplorer" appearance="2" expanded="2">
-<page content="org.eclipse.wst.jsdt.ui.PackageExplorer" label="Script Explorer"/>
+<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="left">&#x0A;<folder activePageID="org.eclipse.wst.jsdt.ui.PackageExplorer" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.wst.jsdt.ui.PackageExplorer" label="Script Explorer"/>
 <page content="org.eclipse.ui.navigator.ProjectExplorer" label="LabelNotFound"/>
 <page content="org.eclipse.wst.jsdt.ui.TypeHierarchy" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@5ad52411" ratio="0.75" ratioLeft="762" ratioRight="254" relationship="2" relative="left">
-<folder appearance="2" expanded="2">
-<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@5ad52411" ratio="0.75" ratioLeft="762" ratioRight="254" relationship="2" relative="left">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.25" ratioLeft="254" ratioRight="762" relationship="2" relative="left"/>
-<info folder="true" part="bottom" ratio="0.74963397" ratioLeft="512" ratioRight="171" relationship="4" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
+<info folder="true" part="bottom" ratio="0.74963397" ratioLeft="512" ratioRight="171" relationship="4" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.wst.jsdt.ui.JavadocView" label="Documentation"/>
 <page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.wst.jsdt.ui.SourceView" label="LabelNotFound"/>
@@ -200,18 +206,14 @@
 <page content="org.eclipse.ui.views.ProgressView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.TaskList" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.PropertySheet" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 <part id="1"/>
 <part id="2"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@3bfdff07" ratio="0.7493438" ratioLeft="571" ratioRight="191" relationship="2" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@3bfdff07" ratio="0.7493438" ratioLeft="571" ratioRight="191" relationship="2" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 </presentation>
 </folder>
 </info>
@@ -338,39 +340,161 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" uri="file:/Users/CourtneyArdis/Documents/Advanced%20Visual%20Frameworks/AVFapp/Android/.project"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" path="/AVFapp/res/layout/activity_main.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/AVFapp/AndroidManifest.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/AVFapp/src/com/AVF/avfapp/MainActivity.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/AVFapp/assets/www/index.html"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/AVFapp/src/com/AVF/avfapp/MainActivity.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/AVFapp/AndroidManifest.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" path="/AVFapp/AndroidManifest.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" path="/AVFapp/assets/www/css/index.css"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/AVFapp/assets/www/js/index.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/AVFapp/assets/www/research1.html"/>
 </editors>
-<item historyLabel=".project" index="0">
+<item historyLabel="MainActivity.java" index="1">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="activity_main.xml" index="1"/>
+<item historyLabel="MainActivity.java" index="1">
+<position info="not_deleted" x="404" y="0"/>
+</item>
+<item historyLabel="index.html" index="0">
+<position/>
+</item>
 <item historyLabel="AndroidManifest.xml" index="2">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="MainActivity.java" index="3">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="index.html" index="0">
+<position/>
 </item>
-<item historyLabel="MainActivity.java" index="3">
-<position info="not_deleted" x="195" y="0"/>
+<item historyLabel="MainActivity.java" index="1">
+<position info="not_deleted" x="404" y="0"/>
 </item>
-<item historyLabel="AndroidManifest.xml" index="2">
-<position info="not_deleted" x="1853" y="0"/>
-</item>
-<item historyLabel="MainActivity.java" index="3">
-<position info="not_deleted" x="195" y="0"/>
+<item historyLabel="index.html" index="0">
+<position/>
 </item>
 <item historyLabel="AndroidManifest.xml" index="2">
-<position info="not_deleted" x="1853" y="0"/>
-</item>
-<item historyLabel="MainActivity.java" index="3">
-<position info="not_deleted" x="195" y="0"/>
-</item>
-<item active="true" historyLabel="index.html" index="4">
 <position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="AndroidManifest.xml" index="3"/>
+<item historyLabel="index.html" index="0">
+<position/>
+</item>
+<item historyLabel="index.css" index="4">
+<position info="not_deleted" x="1845" y="0"/>
+</item>
+<item historyLabel="index.js" index="5">
+<position info="not_deleted" x="1897" y="0"/>
+</item>
+<item historyLabel="index.html" index="0">
+<position info="not_deleted" x="692" y="0"/>
+</item>
+<item historyLabel="index.css" index="4">
+<position/>
+</item>
+<item historyLabel="index.js" index="5">
+<position info="not_deleted" x="1897" y="0"/>
+</item>
+<item historyLabel="index.css" index="4">
+<position/>
+</item>
+<item historyLabel="index.js" index="5">
+<position info="not_deleted" x="1897" y="0"/>
+</item>
+<item historyLabel="index.html" index="0">
+<position/>
+</item>
+<item historyLabel="index.css" index="4">
+<position/>
+</item>
+<item historyLabel="index.html" index="0">
+<position/>
+</item>
+<item historyLabel="research1.html" index="6">
+<position info="not_deleted" x="3089" y="0"/>
+</item>
+<item historyLabel="index.html" index="0">
+<position/>
+</item>
+<item historyLabel="index.js" index="5">
+<position info="not_deleted" x="1897" y="0"/>
+</item>
+<item historyLabel="index.css" index="4">
+<position/>
+</item>
+<item historyLabel="index.html" index="0">
+<position/>
+</item>
+<item historyLabel="research1.html" index="6">
+<position/>
+</item>
+<item historyLabel="index.css" index="4">
+<position/>
+</item>
+<item historyLabel="index.html" index="0">
+<position/>
+</item>
+<item historyLabel="research1.html" index="6">
+<position/>
+</item>
+<item historyLabel="index.html" index="0">
+<position/>
+</item>
+<item historyLabel="index.css" index="4">
+<position/>
+</item>
+<item historyLabel="index.js" index="5">
+<position info="not_deleted" x="1897" y="0"/>
+</item>
+<item historyLabel="research1.html" index="6">
+<position/>
+</item>
+<item historyLabel="index.js" index="5">
+<position/>
+</item>
+<item historyLabel="research1.html" index="6">
+<position/>
+</item>
+<item historyLabel="index.html" index="0">
+<position/>
+</item>
+<item historyLabel="index.css" index="4">
+<position/>
+</item>
+<item historyLabel="index.js" index="5">
+<position/>
+</item>
+<item historyLabel="index.html" index="0">
+<position/>
+</item>
+<item historyLabel="index.css" index="4">
+<position/>
+</item>
+<item historyLabel="index.js" index="5">
+<position info="not_deleted" x="1897" y="0"/>
+</item>
+<item historyLabel="index.css" index="4">
+<position/>
+</item>
+<item historyLabel="research1.html" index="6">
+<position/>
+</item>
+<item historyLabel="index.js" index="5">
+<position info="not_deleted" x="1897" y="0"/>
+</item>
+<item historyLabel="index.css" index="4">
+<position/>
+</item>
+<item historyLabel="index.html" index="0">
+<position info="not_deleted" x="0" y="3908"/>
+</item>
+<item historyLabel="index.js" index="5">
+<position info="not_deleted" x="1897" y="0"/>
+</item>
+<item historyLabel="index.css" index="4">
+<position/>
+</item>
+<item historyLabel="index.js" index="5">
+<position info="not_deleted" x="1897" y="0"/>
+</item>
+<item active="true" historyLabel="index.html" index="0">
+<position info="not_deleted" x="0" y="3781"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -389,14 +513,23 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="index.html" tooltip="AVFapp/assets/www/index.html">
-<persistable path="/AVFapp/assets/www/index.html"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="research1.html" tooltip="AVFapp/assets/www/research1.html">
+<persistable path="/AVFapp/assets/www/research1.html"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="index.js" tooltip="AVFapp/assets/www/js/index.js">
+<persistable path="/AVFapp/assets/www/js/index.js"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" name="index.css" tooltip="AVFapp/assets/www/css/index.css">
+<persistable path="/AVFapp/assets/www/css/index.css"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="AndroidManifest.xml" tooltip="AVFapp/AndroidManifest.xml">
+<persistable path="/AVFapp/AndroidManifest.xml"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MainActivity.java" tooltip="AVFapp/src/com/AVF/avfapp/MainActivity.java">
 <persistable path="/AVFapp/src/com/AVF/avfapp/MainActivity.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="AndroidManifest.xml" tooltip="AVFapp/AndroidManifest.xml">
-<persistable path="/AVFapp/AndroidManifest.xml"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="index.html" tooltip="AVFapp/assets/www/index.html">
+<persistable path="/AVFapp/assets/www/index.html"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="activity_main.xml" tooltip="AVFapp/res/layout/activity_main.xml">
 <persistable path="/AVFapp/res/layout/activity_main.xml"/>
