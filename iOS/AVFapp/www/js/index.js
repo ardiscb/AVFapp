@@ -31,7 +31,7 @@ $.ajax({
     type: "GET",
     url: "http://api.techsavvy.io/jobs/javascript+san+francisco?limit=15",
     dataType: "json",
-    success: function(data, results){		
+    success: function(data, response){		
 		console.log(data);		
 		for (i=0, j=data.data.length; i<j; i++){
 			$("" +
@@ -43,8 +43,8 @@ $.ajax({
 			).appendTo("#jobList");		
 		}	
     },
-    error: function(status, results){
-    	console.log(status, results);
+    error: function(status, response){
+    	console.log(status, response);
     }
 });
 
