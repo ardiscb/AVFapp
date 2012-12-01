@@ -3,13 +3,12 @@ AVF 1212
 Demo App 2 */
 
 //AJAX call to get Twitter feeds about Marvel Comics
+
 $.ajax({
     type: "GET",
     url: "http://search.twitter.com/search.json?q=marvel%20comics&callback=?",
     dataType: "json",
-    success: function(data, response){
-  //   	$("#feed")		
-		// .html("<p>Twitter Feed Load Successful.</p>");		
+    success: function(data, response){		
 		console.log(data);		
 		for (i=0, j=data.results.length; i<j; i++){
 			$("" +
@@ -26,25 +25,14 @@ $.ajax({
     }
 });
 
+
 //AJAX call to get job listings from techsavvy.io
 $.ajax({
     type: "GET",
     url: "http://api.techsavvy.io/jobs/javascript+san+francisco?limit=15",
     dataType: "json",
-    success: function(data, results){
-  //   	$("#jobs")		
-		// .html("<p>Job List Load Successful.</p>");		
-		console.log(data);	
-		// $.each(data, function(index,){
-		// 	alert('in for loop');
-		// 	$("" +
-		// 		"<li>" +				
-		// 		"<p>" + data.location + "</p>" +				
-		// 		"<a>" + data.company + "</a>" +				
-		// 		"<p>" + data.description + "</p>" +				
-		// 		"</li>"			
-		// 	).appendTo("#jobList");	
-		// });	
+    success: function(data, results){		
+		console.log(data);		
 		for (i=0, j=data.data.length; i<j; i++){
 			$("" +
 				"<li>" +				
@@ -59,6 +47,7 @@ $.ajax({
     	console.log(status, results);
     }
 });
+
 
 //First attempt - Console logs but doesn't display on the page.	
 // $(function(){

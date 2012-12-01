@@ -44,9 +44,9 @@ body{
 li{
     list-style: none;
 }
-div{
+/*div{
     margin: 5px;
-}
+}*/
 h1{
     color: #77d42a;
 }
@@ -63,8 +63,8 @@ ul{
 }
 #header, #content, #footer {
     text-align: center;
-    margin-left: 35px;
-    margin-right: 35px;
+/*    margin-left: 35px;
+    margin-right: 35px;*/
 }
 #footer{
     color: gray;

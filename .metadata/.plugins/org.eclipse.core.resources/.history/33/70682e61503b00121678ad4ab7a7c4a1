@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+Courtney Ardis
+AVF 1212
+Demo App 1
+-->
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<title>Research Discussion 1</title>
+</head>
+<body>
+	<!-- Back button -->
+	<a href = "javascript:history.back()">Back</a>
+	<!-- Discussion Questions & Answers -->
+	<div class="main" class="research">
+		<!-- Question 1 -->
+		<p><strong>Less obvious perks of using 'live' data resources include logins and payments. How could Twitter be used in these two scenarios?</strong></p>
+		<!-- Answer 1 -->
+		<p>In my app, the user will log onto Twitter and within the app, it will display comic book related feeds. I have no intent on using a payment feature, but there could be a way to buy comics that were mentioned in the Twitter feeds.</p>
+		<!-- Question 2 -->
+		<p><strong>Visit Programmableweb.com and search for JSON-P data sources. Why would we need JSON-P, specifically?</strong></p>
+		<!-- Answer 2 -->
+		<p>We need JSON-P to talk to the APIs, such as Twitter, by having a proxy on the app that then makes the AJAX call to pull in Twitter feeds.</p>
+		<!-- Question 3 -->
+		<p><strong>Based on the JSON-P search results: what data resource(s) do you think might pair well with which types of Native device features?</strong></p>
+		<!-- Answer 3 -->
+		<p>Flickr is a good data resource that would allow users to take pictures with the device&apos;s camera and upload them to the API. ShareFile would also work well with the device&apos;s connection feature by enabling users to share the pictures they have taken with other people, which is essentially what Flickr does as well except I don&apos;t believe ShareFile takes pictures.</p>
+		<!-- Question 4 -->
+		<p><strong>Please describe any design and functionality intentions you may have for your Demo app components this month.</strong></p>
+		<!-- Answer 4 -->
+		<p>I want the design of my app to feel and look very simple. I plan to implement the Geolocation, Camera, Network Connection, Notification, and Events native device features. The user will be able to take pictures with the device&apos;s camera and upload them to Twitter or share them on Flickr using the network connection. Geolocation will be used to display where the photo was taken by getting the device&apos;s location. Notifications will notify users about new comic book feeds that have been posted on Twitter. The events feature will be used to save any events that are found within the Twitter feeds to the device&apos;s calendar.</p>
+		<!-- Question 5 -->
+		<p><strong>Briefly describe some past 'lessons learned' regarding workflow as it relates to research, design, development, etc.</strong></p>
+		<!-- Answer 5 -->
+		<p>I&apos;ve learned that starting earlier and getting as much done for the current week and even the week after that result in a better app and better grades. This is not always feasible, but is what I strive to do each week in each course.  </p>
+	</div>
+	<script type="text/javascript" src="cordova-2.2.0.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
+
+</html>
