@@ -6,19 +6,19 @@ Demo App 2 */
 $.ajax({
     type: "GET",
     url: "http://search.twitter.com/search.json?q=marvel%20comics&callback=?",
-    dataType: "jsonp",
+    dataType: "json",
     success: function(data, response){
-    	$("#feed")		
-		.html("<p>Twitter Feed Load Successful.</p>");		
+  //   	$("#feed")		
+		// .html("<p>Twitter Feed Load Successful.</p>");		
 		console.log(data);		
 		for (i=0, j=data.results.length; i<j; i++){
-			$("#twitterFeed").append(
+			$("" +
 				"<li>" +				
 				"<img src='" + data.results[i].profile_image_url + "' />" +				
-				"<a>" + data.results[i].from_user + "</a>" +				
+				"<a href=''>" + data.results[i].from_user + "</a>" +				
 				"<p>" + data.results[i].text + "</p>" +				
 				"</li>"			
-			);		
+			).appendTo("#twitterFeed");		
 		}	
     },
     error: function(status, results){
@@ -29,20 +29,30 @@ $.ajax({
 //AJAX call to get job listings from techsavvy.io
 $.ajax({
     type: "GET",
-    url: "http://api.techsavvy.io/jobs/javascript?limit=15&format=jsonp&callback=mySuperNeatCallback",
-    dataType: "jsonp",
-    success: function(data, response){
-    	$("#jobs")		
-		.html("<p>Job List Load Successful.</p>");		
-		console.log(data);		
-		for (i=0, j=data.length; i<j; i++){
-			$("#jobList").append(
+    url: "http://api.techsavvy.io/jobs/javascript+san+francisco?limit=15",
+    dataType: "json",
+    success: function(data, results){
+  //   	$("#jobs")		
+		// .html("<p>Job List Load Successful.</p>");		
+		console.log(data);	
+		// $.each(data, function(index,){
+		// 	alert('in for loop');
+		// 	$("" +
+		// 		"<li>" +				
+		// 		"<p>" + data.location + "</p>" +				
+		// 		"<a>" + data.company + "</a>" +				
+		// 		"<p>" + data.description + "</p>" +				
+		// 		"</li>"			
+		// 	).appendTo("#jobList");	
+		// });	
+		for (i=0, j=data.data.length; i<j; i++){
+			$("" +
 				"<li>" +				
-				"<img src='" + data[i].company_logo + "' />" +				
-				"<a>" + data[i].company + "</a>" +				
-				"<p>" + data[i].description + "</p>" +				
+				"<p>" + data.data[i].location + "</p>" +				
+				"<a href=''>" + data.data[i].company + "</a>" +				
+				"<p>" + data.data[i].description + "</p>" +				
 				"</li>"			
-			);		
+			).appendTo("#jobList");		
 		}	
     },
     error: function(status, results){

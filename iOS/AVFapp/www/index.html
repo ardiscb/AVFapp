@@ -49,7 +49,7 @@ Demo App 2
                     <h2>Data Sources</h2>
                     <ul class="main">
                         <li class="liInline"><a id="twitter" href="feed.html">Twitter</a> |</li>
-                        <li class="liInline"><a id="jobs" href="jobs.html">TechSavvy</a></li>
+                        <li class="liInline"><a id="job" href="jobs.html">TechSavvy</a></li>
                     </ul>
                 </section>
             </div>
@@ -57,18 +57,16 @@ Demo App 2
                 <section>
                     <h2>Video</h2>
                     <video text-align="left" class="main" width="640" height="360" preload controls>
-                        <source src="http://youtu.be/Bn-qMJl7qkI" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-                        <source src="" type='video/webm; codecs="vp8, vorbis"'>
-                        <source src="" type='video/ogg; codecs="theora, vorbis"'>
-                        <object
+                        <!--Video stored on Dropbox: https://www.dropbox.com/s/18agp61uiaru5qm/avf_short_1.mp4 -->
+                        <source src="video/avf_short_1.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                        <!-- <object
                             type="application/x-shockwave-flash"
                             data="http://youtu.be/Bn-qMJl7qkI">
                         <param name="movie" value="http://youtu.be/Bn-qMJl7qkI">
-                        </object>
-                        <!-- 
-                        Link to video in Dropbox
-                        https://www.dropbox.com/s/18agp61uiaru5qm/avf_short_1.mp4 
-                        -->
+                        </object> -->
+                        <!-- <source src="WildLife.webm" type='video/webm; codecs=vp8, vorbis'>
+                        <source src='WildLife.ogv' type='video/ogg; codecs="theora, vorbis"'>-->
+                        <!--Video stored on Dropbox: https://www.dropbox.com/s/18agp61uiaru5qm/avf_short_1.mp4 -->
                     </video>
                 </section>
             </div>
@@ -80,7 +78,6 @@ Demo App 2
         <!--Javascript-->
         <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
         <script type="text/javascript" src="cordova-2.2.0.js"></script>
-        <script type="text/javascript" src="http://api.techsavvy.io/jobs/javascript?limit=15&format=jsonp&callback=mySuperNeatCallback"></script
         <script type="text/javascript" src="js/index.js"></script>
     </body>
 </html>
