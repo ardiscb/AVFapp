@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!--
+Courtney Ardis
+AVF 1212
+Demo App 2
+-->
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>My App</title>
+    </head>
+    <body>
+        <!-- Header -->
+        <div id="header">
+            <h1>My App</h1>
+        </div>
+        <!-- Content -->
+        <div id="content">
+            <!-- Native Features -->
+            <div id="nativeFeatures">
+                <section>
+                    <h2>Native Features</h2>
+                    <ul class="main">
+                        <li class="liInline"><button type="button" class="button">Geolocation</button></li>
+                        <li class="liInline"><button type="button" class="button">Camera</button></li>
+                        <li class="liInline"><button type="button" class="button">Network</button></li>
+                        <li class="liInline"><button type="button" class="button">Notification</button></li>
+                        <li class="liInline"><button type="button" class="button">Event</button></li>
+                    </ul>
+                </section>
+            </div>
+            <!-- Research links -->
+            <div id="research">
+                <section>
+                    <h2>Research</h2>
+                    <ul class="main">
+                        <li><a href="research1.html">Week 1: Data Research, Project Intent</a></li>
+                        <li><a href="research2.html">Week 2: Accessibility</a></li>
+                        <li><a href="">Week 3: Industry Research</a></li>
+                    </ul>
+                </section>
+            </div>
+            <!-- Data Sources -->
+            <div id="dataSources">
+                <section>
+                    <h2>Data Sources</h2>
+                    <ul class="main">
+                        <li class="liInline"><a id="twitter" href="feed.html">Twitter</a> |</li>
+                        <li class="liInline"><a id="job" href="jobs.html">TechSavvy</a></li>
+                    </ul>
+                </section>
+            </div>
+            <div id="video">
+                <section>
+                    <h2>Video</h2>
+                    <video text-align="left" class="main" width="640" height="360" preload controls>
+                        <!--Video stored on Dropbox: https://www.dropbox.com/s/18agp61uiaru5qm/avf_short_1.mp4 -->
+                        <source src="video/avf_short_1.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                        <source src="video/avf_short_1.webm" type='video/webm; codecs=vp8, vorbis'>
+                        <source src='video/avf_short_1.ogv' type='video/ogg; codecs="theora, vorbis"'>
+                        <!-- <object
+                            type="application/x-shockwave-flash"
+                            data="http://youtu.be/Bn-qMJl7qkI">
+                        <param name="movie" value="http://youtu.be/Bn-qMJl7qkI">
+                        </object> -->
+                    </video>
+                </section>
+            </div>
+        </div>
+        <!-- Footer -->
+        <div id="footer">
+            <small>Created by Courtney Ardis in AVF1212</small>
+        </div>
+        <!--Javascript-->
+        <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" src="cordova-2.2.0.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>
