@@ -58,6 +58,12 @@ h2{
 ul{
     margin: 0px;
 }
+#twitterA, #jobsA{
+    display: block;
+}
+#twitterP, .jobsP{
+    font-size: 12px;
+}
 .research{
     color: #fff;
 }
@@ -81,4 +87,8 @@ ul{
 #video{
     text-align: left;
 }
+.override {
+    -webkit-padding-start: 0px !important;
+}
+
 

@@ -5,7 +5,8 @@ Demo App 2 */
 
 var onDeviceReady = function() {
 	connectionStatus();
-	// document.addEventListener("online", onlineNow, false);
+	// onConnectMsg();
+	window.addEventListener("batterylow", onBatteryLow, false);
 }
 
 document.addEventListener("deviceready", onDeviceReady, false);
@@ -66,9 +67,9 @@ $.ajax({
 
 // // Native device feature: Events
 // // Handle the online event
-// var onlineNow = function(){
-// 	alert("You are online!");
-// };
+// var onBatteryLow = function(info) {
+//     alert("Battery Level Low " + info.level + "%"); 
+// }
 
 // Native device feature: Connection
 var connectionStatus = function() {
@@ -84,7 +85,7 @@ var connectionStatus = function() {
     states[Connection.NONE]     = 'No network connection';
 
     alert('Connection type: ' + states[networkState]);
-    if (networkState != Connection.NONE || Connection.UNKNOWN){
+    if (networkState != Connection.NONE){
     	onConnectMsg();
     }
 };
