@@ -4,8 +4,9 @@ Demo App 2 */
 
 
 var onDeviceReady = function() {
-	connectionStatus();
-	// document.addEventListener("online", onlineNow, false);
+		connectionStatus();
+		// onConnectMsg();
+		window.addEventListener("batterylow", onBatteryLow, false);
 }
 
 document.addEventListener("deviceready", onDeviceReady, false);
@@ -66,9 +67,9 @@ $.ajax({
 
 // // Native device feature: Events
 // // Handle the online event
-// var onlineNow = function(){
-// 	alert("You are online!");
-// };
+var onBatteryLow = function(info) {
+    alert("Battery Level Low " + info.level + "%"); 
+}
 
 // Native device feature: Connection
 var connectionStatus = function() {
@@ -84,23 +85,20 @@ var connectionStatus = function() {
     states[Connection.NONE]     = 'No network connection';
 
     alert('Connection type: ' + states[networkState]);
-    if (networkState != Connection.NONE || Connection.UNKNOWN){
-    	onConnectMsg();
-    }
 };
 
-// Native device feature: Notification
-// onConnectMsg alert dismissed
-var alertDismissed = function() {
-    //return to index.html
-}
+// // Native device feature: Notification
+// // onConnectMsg alert dismissed
+// var alertDismissed = function() {
+//     //return to index.html
+// }
 
-var onConnectMsg = function() {
-    navigator.notification.alert(
-        'You are now connected!',  // message
-        alertDismissed,            // callback
-        'Network Connection',      // title
-        'OK'                   	   // buttonName
-    );
-}
+// var onConnectMsg = function() {
+//     navigator.notification.alert(
+//         'You are now connected!',  // message
+//         alertDismissed,            // callback
+//         'Network Connection',      // title
+//         'OK'                   	   // buttonName
+//     );
+// }
 

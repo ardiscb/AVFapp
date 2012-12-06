@@ -2,18 +2,16 @@
 AVF 1212
 Demo App 2 */
 
+document.addEventListener("deviceready", onDeviceReady, false);
 
 var onDeviceReady = function() {
 	connectionStatus();
-	// document.addEventListener("online", onlineNow, false);
+	onConnectMsg();
 }
 
-document.addEventListener("deviceready", onDeviceReady, false);
-
-//Video playback
 var video = $('<video>');
 video.on('click',function(){
-	video.play();
+  video.play();
 },false);
 
 // Not working
@@ -52,10 +50,10 @@ $.ajax({
 		for (i=0, j=data.data.length; i<j; i++){
 			$("" +
 				"<li>" +				
-				"<p class='jobsP'>" + data.data[i].location + "</p>" +				
-				"<a id='jobsA' href=''>" + data.data[i].company + "</a>" +				
-				"<p class='jobsP'>" + data.data[i].description + "</p>" +				
-				"</li><hr />"			
+				"<p>" + data.data[i].location + "</p>" +				
+				"<a href=''>" + data.data[i].company + "</a>" +				
+				"<p>" + data.data[i].description + "</p>" +				
+				"</li>"			
 			).appendTo("#jobList");		
 		}	
     },
@@ -63,12 +61,6 @@ $.ajax({
     	console.log(status, response);
     }
 });
-
-// // Native device feature: Events
-// // Handle the online event
-// var onlineNow = function(){
-// 	alert("You are online!");
-// };
 
 // Native device feature: Connection
 var connectionStatus = function() {
@@ -84,9 +76,6 @@ var connectionStatus = function() {
     states[Connection.NONE]     = 'No network connection';
 
     alert('Connection type: ' + states[networkState]);
-    if (networkState != Connection.NONE || Connection.UNKNOWN){
-    	onConnectMsg();
-    }
 };
 
 // Native device feature: Notification
@@ -103,4 +92,3 @@ var onConnectMsg = function() {
         'OK'                   	   // buttonName
     );
 }
-
