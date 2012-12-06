@@ -5,7 +5,7 @@ Demo App 2 */
 
 var onDeviceReady = function() {
 	connectionStatus();
-//	document.addEventListener("online", online, false);
+	document.addEventListener("online", online, false);
 }
 
 document.addEventListener("deviceready", onDeviceReady, false);
@@ -66,9 +66,9 @@ $.ajax({
 
 // // Native device feature: Events
 // // Handle the online event
-//var online = function(){
-//	alert("You are online!");
-//};
+var online = function(){
+	alert("You are online!");
+};
 
 // Native device feature: Connection
 var connectionStatus = function() {
