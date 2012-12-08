@@ -79,7 +79,7 @@ var batteryInfo = function(){
 
 // Native device feature: Connection
 var connectionStatus = function() {
-    var networkState = navigator.network.connection.type;
+    var networkState = navigator.connection.type;
 
     var states = {};
     states[Connection.UNKNOWN]  = 'Unknown connection';
@@ -90,11 +90,11 @@ var connectionStatus = function() {
     states[Connection.CELL_4G]  = 'Cell 4G connection';
     states[Connection.NONE]     = 'No network connection';
     console.log(navigator.connection);
-    // if (navigator.connection === true){
-    // 	alert("Connection available!");
-    // }else{
+    if (navigator.connection === true){
+    	alert("Connection available!");
+    }else{
     	alert('Connection type: ' + states[networkState]);
-    // }
+    }
     //If not connect, try to connect
     //Write code here
 };
@@ -106,8 +106,8 @@ var alertDismissed = function() {
 }
 
 var onConnectMsg = function(networkState) {
-	if (networkState !== Connection.NONE || Connection.UNKNOWN){
- 		navigator.notification.alert(
+	if (networkState != Connection.NONE || Connection.UNKNOWN){
+	    navigator.notification.alert(
 	        'You are now connected!',  // message
 	        alertDismissed,            // callback
 	        'Network Connection',      // title

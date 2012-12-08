@@ -547,3 +547,29 @@ Caused by: org.eclipse.swt.SWTException: Widget is disposed
 	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
 	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
 	... 22 more
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2012-12-07 17:51:15.463
+!MESSAGE Could not read jar file contents from /AVFapp/libs/cordova-2.2.0.jar
+!STACK 0
+java.io.FileNotFoundException: /AVFapp/libs/cordova-2.2.0.jar (No such file or directory)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:120)
+	at com.android.tools.lint.client.api.LintDriver.findClasses(LintDriver.java:1142)
+	at com.android.tools.lint.client.api.LintDriver.checkClasses(LintDriver.java:932)
+	at com.android.tools.lint.client.api.LintDriver.runFileDetectors(LintDriver.java:785)
+	at com.android.tools.lint.client.api.LintDriver.checkProject(LintDriver.java:661)
+	at com.android.tools.lint.client.api.LintDriver.analyze(LintDriver.java:288)
+	at com.android.ide.eclipse.adt.internal.lint.LintJob.run(LintJob.java:151)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.android.ide.eclipse.adt 4 2 2012-12-07 17:51:16.754
+!MESSAGE Problems occurred when invoking code from plug-in: "com.android.ide.eclipse.adt".
+!STACK 0
+java.lang.NullPointerException
+	at com.android.ide.eclipse.adt.internal.lint.LintViewPart.done(LintViewPart.java:393)
+	at org.eclipse.core.internal.jobs.JobListeners$3.notify(JobListeners.java:39)
+	at org.eclipse.core.internal.jobs.JobListeners.doNotify(JobListeners.java:112)
+	at org.eclipse.core.internal.jobs.JobListeners.done(JobListeners.java:152)
+	at org.eclipse.core.internal.jobs.JobManager.endJob(JobManager.java:647)
+	at org.eclipse.core.internal.jobs.WorkerPool.endJob(WorkerPool.java:105)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:71)

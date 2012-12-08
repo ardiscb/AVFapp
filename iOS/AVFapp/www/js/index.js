@@ -2,10 +2,20 @@
 AVF 1212
 Demo App 2 */
 
-
+// Cordovia ready
 var onDeviceReady = function() {
-	connectionStatus();
-	// document.addEventListener("online", onlineNow, false);
+	$("#network").click(function() {
+		connectionStatus();
+	});
+	$("#event").click(function(){
+		window.addEventListener("batterystatus", batteryInfo, false);
+	});
+	$("#notification").click(function(){
+		onConnectMsg();
+	});
+	// $("#camera").click(function()){
+	// 	navigator.device.capture.captureImage(captureImg, captureError, {limit: 1});
+	// }
 }
 
 document.addEventListener("deviceready", onDeviceReady, false);
@@ -64,11 +74,11 @@ $.ajax({
     }
 });
 
-// // Native device feature: Events
-// // Handle the online event
-// var onlineNow = function(){
-// 	alert("You are online!");
-// };
+// Native device feature: Events
+// Handle the online event
+var batteryInfo = function(){
+	alert("Level: " + info.level);
+};
 
 // Native device feature: Connection
 var connectionStatus = function() {
@@ -82,11 +92,11 @@ var connectionStatus = function() {
     states[Connection.CELL_3G]  = 'Cell 3G connection';
     states[Connection.CELL_4G]  = 'Cell 4G connection';
     states[Connection.NONE]     = 'No network connection';
-
+    
     alert('Connection type: ' + states[networkState]);
-    if (networkState != Connection.NONE || Connection.UNKNOWN){
-    	onConnectMsg();
-    }
+
+    //If not connect, try to connect
+    //Write code here
 };
 
 // Native device feature: Notification
@@ -95,12 +105,36 @@ var alertDismissed = function() {
     //return to index.html
 }
 
-var onConnectMsg = function() {
-    navigator.notification.alert(
-        'You are now connected!',  // message
-        alertDismissed,            // callback
-        'Network Connection',      // title
-        'OK'                   	   // buttonName
-    );
+var onConnectMsg = function(networkState) {
+	if (networkState != Connection.NONE || Connection.UNKNOWN){
+ 		navigator.notification.alert(
+	        'You are now connected!',  // message
+	        alertDismissed,            // callback
+	        'Network Connection',      // title
+	        'OK'                   	   // buttonName
+    	);
+	}else{
+		navigator.notification.alert(
+	        'Unable to find connection status',  // message
+	        alertDismissed,            			 // callback
+	        'Network Connection',     			 // title
+	        'OK'                   	   			 // buttonName
+    	);
+	}
 }
+
+// Native device feature: Camera
+// Called when capture operation is finished
+// var captureImg = function(mediaFiles) {
+//     var i, len;
+//     for (i = 0, len = mediaFiles.length; i < len; i += 1) {
+//         uploadFile(mediaFiles[i]);
+//     }       
+// }
+
+// // Called if something bad happens.
+// var captureError = function(error) {
+//     var msg = 'An error occurred during capture: ' + error.code;
+//     navigator.notification.alert(msg, null, 'Uh oh!');
+// }
 

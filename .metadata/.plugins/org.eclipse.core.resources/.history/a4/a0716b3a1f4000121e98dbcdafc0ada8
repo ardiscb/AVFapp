@@ -2,17 +2,10 @@
 AVF 1212
 Demo App 2 */
 
-// Cordovia ready
+
 var onDeviceReady = function() {
-	$("#network").click(function() {
-		connectionStatus();
-	});
-	$("#event").click(function(){
-		window.addEventListener("batterystatus", batteryInfo, false);
-	});
-	$("#notification").click(function(){
-		onConnectMsg();
-	});
+	connectionStatus();
+//	document.addEventListener("online", online, false);
 }
 
 document.addEventListener("deviceready", onDeviceReady, false);
@@ -71,15 +64,15 @@ $.ajax({
     }
 });
 
-// Native device feature: Events
-// Handle the online event
-var batteryInfo = function(){
-	alert("Level: " + info.level);
-};
+// // Native device feature: Events
+// // Handle the online event
+//var online = function(){
+//	alert("You are online!");
+//};
 
 // Native device feature: Connection
 var connectionStatus = function() {
-    var networkState = navigator.network.connection.type;
+    var networkState = navigator.connection.type;
 
     var states = {};
     states[Connection.UNKNOWN]  = 'Unknown connection';
@@ -89,14 +82,11 @@ var connectionStatus = function() {
     states[Connection.CELL_3G]  = 'Cell 3G connection';
     states[Connection.CELL_4G]  = 'Cell 4G connection';
     states[Connection.NONE]     = 'No network connection';
-    console.log(navigator.connection);
-    // if (navigator.connection === true){
-    // 	alert("Connection available!");
-    // }else{
-    	alert('Connection type: ' + states[networkState]);
-    // }
-    //If not connect, try to connect
-    //Write code here
+
+    alert('Connection type: ' + states[networkState]);
+    if (networkState != Connection.NONE || Connection.UNKNOWN){
+    	onConnectMsg();
+    }
 };
 
 // Native device feature: Notification
@@ -105,21 +95,12 @@ var alertDismissed = function() {
     //return to index.html
 }
 
-var onConnectMsg = function(networkState) {
-	if (networkState !== Connection.NONE || Connection.UNKNOWN){
- 		navigator.notification.alert(
-	        'You are now connected!',  // message
-	        alertDismissed,            // callback
-	        'Network Connection',      // title
-	        'OK'                   	   // buttonName
-    	);
-	}else{
-		navigator.notification.alert(
-	        'Unable to find connection status',  // message
-	        alertDismissed,            			 // callback
-	        'Network Connection',     			 // title
-	        'OK'                   	   			 // buttonName
-    	);
-	}
+var onConnectMsg = function() {
+    navigator.notification.alert(
+        'You are now connected!',  // message
+        alertDismissed,            // callback
+        'Network Connection',      // title
+        'OK'                   	   // buttonName
+    );
 }
 
