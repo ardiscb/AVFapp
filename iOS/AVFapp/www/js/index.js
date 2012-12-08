@@ -4,18 +4,21 @@ Demo App 2 */
 
 // Cordovia ready
 var onDeviceReady = function() {
+	$("#capture").click(function() {
+		imageCapture();
+	});
+	$("#storage").click(function(){
+		saveImg();
+	});
 	$("#network").click(function() {
 		connectionStatus();
-	});
-	$("#event").click(function(){
-		window.addEventListener("batterystatus", batteryInfo, false);
 	});
 	$("#notification").click(function(){
 		onConnectMsg();
 	});
-	// $("#camera").click(function()){
-	// 	navigator.device.capture.captureImage(captureImg, captureError, {limit: 1});
-	// }
+	$("#event").click(function(){
+		window.addEventListener("batterystatus", batteryInfo, false);
+	});
 }
 
 document.addEventListener("deviceready", onDeviceReady, false);
@@ -26,7 +29,8 @@ video.on('click',function(){
 	video.play();
 },false);
 
-// Not working
+//// Not working ////
+// Back to previous page button/link
 // $('#backBtn').history.back();
 
 // AJAX call to get Twitter feeds about Marvel Comics
@@ -74,15 +78,37 @@ $.ajax({
     }
 });
 
-// Native device feature: Events
-// Handle the online event
-var batteryInfo = function(){
-	alert("Level: " + info.level);
-};
+// Native device feature: Capture
+// Called when capture operation is finished
+var captureImg = function(mediaFiles) {
+    for (var i = 0, j = mediaFiles.length; i < j; i += 1) {
+    // Store photo
+	// Upload file to twitter
+    }       
+}
+
+// Called if error occurs
+// Also uses native feature: notification
+var captureError = function(error) {
+    var errorMsg = 'An error occurred during capture: ' + error.code + '. Restart app and try again.';
+    navigator.notification.alert(errorMsg, null, 'Oops!');
+}
+
+// Starts device capture
+var imageCapture = function(){
+	navigator.device.capture.captureImage(captureImg, captureError, {limit: 1});
+}
+
+// Native device feature: Storage
+
 
 // Native device feature: Connection
 var connectionStatus = function() {
-    var networkState = navigator.connection.type;
+	// Using depreciated navigator.network.connection because otherwise it doesn't work on Android emulator
+	// Source: https://issues.apache.org/jira/browse/CB-1807
+	// Error in phonegap 2.2.0
+	// Descripton states that using this will result in the correct data type for the emulator
+    var networkState = navigator.network.connection.type;
 
     var states = {};
     states[Connection.UNKNOWN]  = 'Unknown connection';
@@ -95,7 +121,7 @@ var connectionStatus = function() {
     
     alert('Connection type: ' + states[networkState]);
 
-    //If not connect, try to connect
+    //If not connected, try to connect
     //Write code here
 };
 
@@ -123,18 +149,9 @@ var onConnectMsg = function(networkState) {
 	}
 }
 
-// Native device feature: Camera
-// Called when capture operation is finished
-// var captureImg = function(mediaFiles) {
-//     var i, len;
-//     for (i = 0, len = mediaFiles.length; i < len; i += 1) {
-//         uploadFile(mediaFiles[i]);
-//     }       
-// }
-
-// // Called if something bad happens.
-// var captureError = function(error) {
-//     var msg = 'An error occurred during capture: ' + error.code;
-//     navigator.notification.alert(msg, null, 'Uh oh!');
-// }
-
+//// Not working ////
+// Native device feature: Events
+// Handle the online event
+var batteryInfo = function(){
+	alert("Level: " + info.level);
+};
