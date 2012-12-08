@@ -4,7 +4,7 @@ Demo App 2 */
 
 // Cordovia ready
 var onDeviceReady = function() {
-	$("#capture").click(function() {
+	$("#camera").click(function() {
 		imageCapture();
 	});
 	$("#storage").click(function(){
@@ -29,7 +29,7 @@ video.on('click',function(){
 	video.play();
 },false);
 
-//// Not working ////
+////Not working////
 // Back to previous page button/link
 // $('#backBtn').history.back();
 
@@ -78,7 +78,7 @@ $.ajax({
     }
 });
 
-// Native device feature: Capture
+// Native device feature: Camera
 // Called when capture operation is finished
 var captureImg = function(mediaFiles) {
     for (var i = 0, j = mediaFiles.length; i < j; i += 1) {
@@ -94,20 +94,24 @@ var captureError = function(error) {
     navigator.notification.alert(errorMsg, null, 'Oops!');
 }
 
-// Starts device capture
+// Starts device camera
 var imageCapture = function(){
 	navigator.device.capture.captureImage(captureImg, captureError, {limit: 1});
 }
 
-// Native device feature: Storage
 
+// Native device feature: Events
+// Handle the online event
+var batteryInfo = function(){
+	alert("Level: " + info.level);
+};
 
 // Native device feature: Connection
 var connectionStatus = function() {
-	// Using depreciated navigator.network.connection because otherwise it doesn't work on Android emulator
+	// Using navigator.network.connection because otherwise it doesn't work on Android emulator
 	// Source: https://issues.apache.org/jira/browse/CB-1807
 	// Error in phonegap 2.2.0
-	// Descripton states that using this will result in the correct data type for the emulator
+	// Descripton states that this will result in the correct data type for the emulator
     var networkState = navigator.network.connection.type;
 
     var states = {};
@@ -121,7 +125,7 @@ var connectionStatus = function() {
     
     alert('Connection type: ' + states[networkState]);
 
-    //If not connected, try to connect
+    //If not connect, try to connect
     //Write code here
 };
 
@@ -148,10 +152,3 @@ var onConnectMsg = function(networkState) {
     	);
 	}
 }
-
-//// Not working ////
-// Native device feature: Events
-// Handle the online event
-var batteryInfo = function(){
-	alert("Level: " + info.level);
-};

@@ -24,7 +24,7 @@ Demo App 2
                 <section>
                     <h2>Native Features</h2>
                     <ul class="main">
-                        <li class="liInline"><button type="button" class="button" id="capture">Capture</button></li>
+                        <li class="liInline"><button type="button" class="button" id="camera">Camera</button></li>
                         <li class="liInline"><button type="button" class="button" id="storage">Storage</button></li>
                         <li class="liInline"><button type="button" class="button" id="network">Network</button></li>
                         <li class="liInline"><button type="button" class="button" id="notification">Notification</button></li>
