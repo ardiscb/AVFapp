@@ -79,7 +79,7 @@ var batteryInfo = function(){
 
 // Native device feature: Connection
 var connectionStatus = function() {
-    var networkState = navigator.network.connection.type;
+    var networkState = navigator.connection.type;
 
     var states = {};
     states[Connection.UNKNOWN]  = 'Unknown connection';
@@ -106,8 +106,8 @@ var alertDismissed = function() {
 }
 
 var onConnectMsg = function(networkState) {
-	if (networkState !== Connection.NONE || Connection.UNKNOWN){
- 		navigator.notification.alert(
+	if (networkState != Connection.NONE || Connection.UNKNOWN){
+	    navigator.notification.alert(
 	        'You are now connected!',  // message
 	        alertDismissed,            // callback
 	        'Network Connection',      // title

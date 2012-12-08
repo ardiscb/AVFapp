@@ -105,20 +105,20 @@ var alertDismissed = function() {
     //return to index.html
 }
 
-var onConnectMsg = function(networkState) {
-	if (networkState !== Connection.NONE || Connection.UNKNOWN){
- 		navigator.notification.alert(
-	        'You are now connected!',  // message
-	        alertDismissed,            // callback
-	        'Network Connection',      // title
-	        'OK'                   	   // buttonName
-    	);
-	}else{
-		navigator.notification.alert(
+var onConnectMsg = function(states) {
+	if (states === 'Unknownn connection' || 'No network connection'){
+    	navigator.notification.alert(
 	        'Unable to find connection status',  // message
 	        alertDismissed,            			 // callback
 	        'Network Connection',     			 // title
 	        'OK'                   	   			 // buttonName
+    	);
+	}else{
+		navigator.notification.alert(
+	        'You are now connected!',  // message
+	        alertDismissed,            // callback
+	        'Network Connection',      // title
+	        'OK'                   	   // buttonName
     	);
 	}
 }
