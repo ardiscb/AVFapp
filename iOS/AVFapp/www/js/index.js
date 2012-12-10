@@ -1,6 +1,6 @@
 /*Courtney Ardis
 AVF 1212
-Demo App 2 */
+Demo App 4 */
 
 // Cordovia ready
 var onDeviceReady = function() {
@@ -120,9 +120,6 @@ var connectionStatus = function() {
     states[Connection.NONE]     = 'No network connection';
     
     alert('Connection type: ' + states[networkState]);
-
-    //If not connected, try to connect
-    //Write code here
 };
 
 // Native device feature: Notification
@@ -155,3 +152,8 @@ var onConnectMsg = function(networkState) {
 var batteryInfo = function(){
 	alert("Level: " + info.level);
 };
+
+
+// After connection use Twitter oAuth to login to Twitter - mashup
+// After photo is captured, post to Twitter - mashup
+
